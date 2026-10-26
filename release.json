@@ -1,12 +1,12 @@
 {
   "app_id": "mustrhq-kitchen-safety",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "schema": 2,
   "min_php": "8.1.0",
   "files": {
     ".gitignore": "89643b388571aefe5a825ea78986e76a03893a705f0d250742f7bfebedbedc64",
     ".htaccess": "e8b0b4a91a2a02099d26e05dd77ead73ac37feee12db52a93e82d2e5969055be",
-    "CHANGELOG.md": "fe11e76f77dc5687796e1a079c0b13c06db5347efcb0cd488a76296196e764b8",
+    "CHANGELOG.md": "5f7985538cb4e5c800afaa0be9bc0fcccbcc361021c19722613f244af3d29b9d",
     "CODE_OF_CONDUCT.md": "b9437c04b0f29460e63a4f8255a8e92db725aec6a0592288af1be6baa7e6684f",
     "CONTRIBUTING.md": "9ac503cfcc901124b9c76a4354c1ee72451bc25d6fae6343f6fd584edf934e06",
     "LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
@@ -37,11 +37,11 @@
     "assets/pwa.js": "aec2f1dbb05ac9e42aee5b8653115cd33fea3034a9aea4a24271f65555fd71ac",
     "docs/.htaccess": "fa28d421a28ed9b6f4b997d5119c2b8adbacff6e2dd119a179b71230f9664934",
     "docs/FOOD-SAFETY-DEFAULTS.md": "d85186df408a8dc1ad595d1133cd1dcb14d876e45a9d4fdef5590de4bb7b8ca9",
-    "docs/INSTALL.md": "9c36a06db8e124300eeec89013978b279218ba0874de7afdd5dafa30a8345e64",
-    "docs/RELEASE-NOTES.md": "e6b0fc2b7c00fed4b193f782a8b3061375aba1feda287c43445ec3fc98acbfa6",
+    "docs/INSTALL.md": "212ef72dad843894c9ddd4dc220eee7cd9b4426f924400cbaae2af4a8a5ed09b",
+    "docs/RELEASE-NOTES.md": "4a1a94866cc237c709955f23d8079d81d85381c861ba5d399b4e7d4840d35cf6",
     "docs/TABLET.md": "c35e40587e161a470e09a1976703c17da870628884ceaaaead22d4232f799b8b",
     "docs/UPDATES.md": "bb90acd3607d84e1ccddc7b29a510dc3bbb520be722303b6b41cfb4f8fa820db",
-    "docs/VALIDATION.md": "490a4cb085fc21a566d0efd6f367fdb5ed80a79ab61c2a7677cd471876698fe2",
+    "docs/VALIDATION.md": "fbe7bc96680e1f51cfe94cd62827387b6d02576a89b11bcb306af5a8248853ac",
     "docs/reset-admin.php": "03cf7773968dcee86861e2e4ac80b0e266ad5046ecd54ce01f065ee84053d0f4",
     "inc/.htaccess": "fa28d421a28ed9b6f4b997d5119c2b8adbacff6e2dd119a179b71230f9664934",
     "inc/actions.php": "d17037f06b0ebdbc3cba41cb1897da9b08f0d2492f04d2b958d9e87d15b223cc",
@@ -56,14 +56,15 @@
     "inc/update-page.php": "336d9abe0a26d440e0ef56d0f77d89ce9f0bd4d507d2bea9516dc9fa6c0e48fa",
     "inc/updater.php": "1fd303f4534b7df6b0e501fbd7399d5992eeb7b6c3edf39c68a42a723c457d30",
     "index.php": "7faaed2bbaf6010bdeeb0c1cbf1b5d6f1008ea9dcaea7154b715266ae80a95f8",
-    "install.php": "2cd8adef2e6409d415352e78ca64053c7e6c3b914df7442d2599b650af2714a6",
+    "install.php": "aee26f4cad8f7121e52199c159f87ccf1d58e2ca7a2e09363fe99c66627fc55c",
     "manifest.php": "0e58e2515f00bb9c0112d23c3e20029e26865c52765949e8ebb4616d0999cd98",
     "offline.html": "70475da9ca94c4272166f2f1de38456d7c11a8d59ae1df2f77648121caed33ba",
-    "sw.js": "20957f01ae3577aa1b71e2c2cc566a728c41886838e17d613484766cdb2ad32a",
+    "sw.js": "f25e58e72cd80ab1646e085f5240ed89f2d613603e05495a51f5e27afa57350b",
     "tests/.htaccess": "fa28d421a28ed9b6f4b997d5119c2b8adbacff6e2dd119a179b71230f9664934",
     "tests/domain.php": "c154d546ae615257e028c32a13b87617e96289ba0b9791d4d568e061fc9547fb",
+    "tests/release-package.py": "750715d1b5044735a58a2c906ffbfa55a55ffe8dff85f490977a74ac3b42f377",
     "tests/updater.php": "8d3091a199d2ea9e0f37f5e9ba6db4352909cc203de9b41e3a3521475c02c538",
-    "version.php": "417ffd34b3a07327c19dd6e74ca2ea0d60c4e623e0a6001dd269f352c776f404"
+    "version.php": "5eeb22f0aa13b198e835fbe72abba89975b6ea82aa171ed99f5b796b577c298d"
   },
   "remove": []
 }

@@ -23,5 +23,7 @@ jobs:
         run: php tests/domain.php
       - name: Updater tests
         run: php tests/updater.php
+      - name: Check release permissions and contents
+        run: python3 tests/release-package.py
       - name: Build installer/update package
         run: python3 scripts/build-release.py --output dist

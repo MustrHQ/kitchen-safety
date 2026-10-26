@@ -1,4 +1,10 @@
-# Release validation - 1.1.0
+# Release validation - 1.1.1
+
+The 1.1.1 packaging fix was tested on 26 October 2026. Every ZIP member now has explicit Unix metadata: regular files 0644 and directories 0755. The regression test rejects a negative-control archive carrying the original owner-only 0600 permissions, and checks required assets, private-file exclusion, CRC and every manifest hash. Validation and release workflows run this test.
+
+Fresh, unconfigured installer pages were browser-tested at both the domain root and a subfolder. Checks asserted the computed Archivo font family, grid fields, navy button colour, bounded page width and mobile overflow; desktop and mobile screenshots were visually inspected. The 42 HTTP/database workflows, 17 domain assertions and 20 updater assertions passed against the newly built release. No database schema change is included.
+
+# Original 1.1.0 validation
 
 Local validation on 26 October 2026 used PHP 8.3 and MariaDB 10.11 with real InnoDB tables.
 

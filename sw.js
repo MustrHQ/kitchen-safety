@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='mustr-safety-static-1.1.0';
+const CACHE='mustr-safety-static-1.1.1';
 const BASE=new URL('./',self.location.href);
 const FILES=['offline.html','assets/app.css','assets/frontend.css','assets/app.js','assets/pwa.js','assets/fonts/archivo-var.woff2','assets/brand/kitchen-safety.svg','assets/icons/icon-192.png','assets/icons/icon-512.png'].map(p=>new URL(p,BASE).href);
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES))));

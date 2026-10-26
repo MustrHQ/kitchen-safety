@@ -1,10 +1,9 @@
-Kitchen Safety 1.1.0 separates a login-free kitchen frontend from a protected admin panel, following the MustrHQ Recipes tablet design.
+Kitchen Safety 1.1.1 fixes the release ZIP permissions that could leave the installer and portal unstyled on cPanel hosting.
 
-- Staff enter names/initials without signing in; readings and follow-ups are explicitly self-reported.
-- Date history, food/cold-storage records, timed cooling and original action trails remain available.
-- Protected ZIP updater with staging, per-file checksums, archive validation, database/file backups and file rollback.
-- Latest stable GitHub Release checks and SHA-256 verified release downloads.
-- Tablet PWA manifest, new logo/icons, standalone launch, offline explanation and local unsaved drafts.
-- Existing 1.0.0 data migrates without replacing original records. The first 1.0.0 upgrade needs a manual code upload; later releases can use the updater.
+- Explicit 0644 permissions for packaged files and 0755 for directories; public CSS, JavaScript, images and fonts are readable after extraction.
+- Packaging regression tests verify Unix permissions, required assets, private-file exclusion and manifest hashes.
+- Fresh installer layout checked at both the domain root and a nested installation URL, including actual computed styles and font loading.
+- Clearer installer requirement labels and the current Kitchen Safety logo.
+- No database changes. Existing configuration and records are retained.
 
-Saving readings requires a server connection. A draft is not a submitted safety record. Validate the kitchen's HACCP controls before live use.
+Extract this release over the existing application folder in cPanel, replacing the application files and keeping config.php and the database. Delete install.php after setup. If adjusting permissions manually, public asset files should be 644 and directories 755; do not make private configuration or backups public. Once the admin panel is styled, later releases can use Admin > Updates.

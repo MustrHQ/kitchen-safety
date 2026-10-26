@@ -17,3 +17,9 @@ Do not share config.php or store database dumps in a public directory. Back up t
 A frontend name is self-reported. To use this as a premises-only recorder, apply your own network/web-server access controls. The application intentionally does not require a staff account or PIN on the frontend.
 
 If all administrators forget their passwords, the CLI-only docs/reset-admin.php recovery script can set a new password with your hosting administrator's help. It accepts the password through standard input, logs the reset and invalidates old sessions; see its usage message. Never place passwords in command arguments or in chat.
+
+## Unstyled installer after extracting version 1.1.0
+
+The 1.1.0 ZIP accidentally marked packaged files as 0600. Some shared hosts therefore ran PHP while refusing to serve its stylesheets and other public assets. Version 1.1.1 explicitly packages files as 0644 and directories as 0755. Extract 1.1.1 over the existing application, preserving config.php and the database. No reinstall is required.
+
+For an immediate manual correction, use cPanel File Manager to set the assets directory and its subdirectories to 755 and the files inside assets to 644. Leave config.php and private backups protected; do not apply a public-read permission change recursively to the whole account. Reload the installer after repairing the public assets.
