@@ -1,0 +1,11 @@
+/config.php
+/.install.lock
+/.config-*.tmp
+/private/*
+!/private/.htaccess
+!/private/index.php
+/dist/
+/vendor/
+.DS_Store
+*.log
+*.sql

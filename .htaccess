@@ -1,0 +1,13 @@
+Options -Indexes
+DirectoryIndex index.php
+<FilesMatch "^(config\.php|\.env|\.ht|.*\.(log|sql|bak|ini|md|lock|tmp))$">
+ Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteRule ^(?:inc|docs|tests|private|scripts|migrations)(?:/|$) - [F,L]
+</IfModule>
+
+<FilesMatch "^\.">
+ Require all denied
+</FilesMatch>

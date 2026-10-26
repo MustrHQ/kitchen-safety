@@ -1,0 +1,4 @@
+<?php
+header('Content-Type: application/manifest+json; charset=utf-8');header('Cache-Control: no-cache');
+$base=rtrim(str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME']??'/')),'/').'/';
+echo json_encode(['id'=>$base,'name'=>'MustrHQ Kitchen Safety','short_name'=>'Kitchen Safety','description'=>'Temperature records, cooling checks and kitchen history.','start_url'=>$base.'index.php','scope'=>$base,'display'=>'standalone','orientation'=>'any','background_color'=>'#f7f9fc','theme_color'=>'#01216c','lang'=>'en-GB','icons'=>[['src'=>$base.'assets/icons/icon-192.png','sizes'=>'192x192','type'=>'image/png','purpose'=>'any'],['src'=>$base.'assets/icons/icon-512.png','sizes'=>'512x512','type'=>'image/png','purpose'=>'any'],['src'=>$base.'assets/icons/maskable-512.png','sizes'=>'512x512','type'=>'image/png','purpose'=>'maskable']]],JSON_UNESCAPED_SLASHES);

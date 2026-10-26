@@ -1,0 +1,36 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, pdo_mysql, zip, curl
+          coverage: none
+      - name: Validate
+        run: |
+          find . -name '*.php' -not -path './private/*' -print0 | xargs -0 -n1 php -l
+          php tests/domain.php
+          php tests/updater.php
+      - name: Build
+        run: python3 scripts/build-release.py --output dist
+      - name: Publish stable release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION=$(php -r 'require "version.php"; echo APP_VERSION;')
+          TAG="v${VERSION}"
+          if [ "$GITHUB_EVENT_NAME" = "push" ] && [ "$GITHUB_REF_NAME" != "$TAG" ]; then exit 1; fi
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/*.zip dist/*.sha256 --clobber
+          else
+            gh release create "$TAG" dist/*.zip dist/*.sha256 --target "$GITHUB_SHA" --title "Kitchen Safety ${VERSION}" --notes-file docs/RELEASE-NOTES.md
+          fi

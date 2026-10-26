@@ -1,0 +1,27 @@
+name: Validate
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.1', '8.3', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, pdo_mysql, zip, curl
+          coverage: none
+      - name: Lint PHP
+        run: find . -name '*.php' -not -path './private/*' -print0 | xargs -0 -n1 php -l
+      - name: Domain tests
+        run: php tests/domain.php
+      - name: Updater tests
+        run: php tests/updater.php
+      - name: Build installer/update package
+        run: python3 scripts/build-release.py --output dist
