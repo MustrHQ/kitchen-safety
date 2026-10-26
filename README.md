@@ -2,6 +2,21 @@
 <p align="center"><strong>Temperature records for the kitchen tablet. A separate admin panel for the manager.</strong><br>Plain PHP + MySQL. Self-hosted. Open source.</p>
 <p align="center"><a href="https://github.com/MustrHQ/kitchen-safety/releases">Downloads</a> · <a href="docs/INSTALL.md">Install</a> · <a href="docs/UPDATES.md">Updates</a> · <a href="docs/TABLET.md">Tablet app</a> · <a href="CHANGELOG.md">Changelog</a></p>
 
+## Preview
+
+Actual application screens from **v1.1.1**, using fictional demo data. This release includes the public-asset permissions fix for cPanel installations. [Download v1.1.1](https://github.com/MustrHQ/kitchen-safety/releases/tag/v1.1.1).
+
+![Kitchen frontend with temperature, date-record, cooling and daily-check shortcuts](.github/previews/kitchen-frontend.png)
+
+*The kitchen frontend: staff can record measured temperatures without signing in.*
+
+| Date history | Protected admin panel |
+| --- | --- |
+| ![Date history with readings, results and recorder names](.github/previews/date-history.png) | ![Admin dashboard with scheduled checks and exceptions](.github/previews/admin-overview.png) |
+| Find readings and follow-up records by date. | Review scheduled checks and items needing attention. |
+
+[View all six previews](.github/previews/README.md), including tablet entry, ZIP/GitHub updates and the installer.
+
 ## Two clear parts
 
 | Kitchen frontend | Protected admin panel |
